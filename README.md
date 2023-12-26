@@ -3,7 +3,7 @@
 
 ## 🤵 INTEGRANTES
 
-Gabriel mendonça |  José Alves |  João Lucas |  Marcio Alberto.
+Gabriel de Mendonça |  José Alves |  João Lucas |  Marcio Alberto
 
 ## 📕 SOBRE O PROJETO
 
