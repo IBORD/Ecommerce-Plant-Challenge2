@@ -7,7 +7,7 @@ Gabriel mendonça |  José Alves |  João Lucas |  Marcio Alberto.
 
 ## 📕 SOBRE O PROJETO
 
-Projeto de implementação de uma Loja ecommerce de plantas utilizando React.
+Projeto de implementação de uma Loja ecommerce de plantas utilizando React..
 
 ## 📌 OBJETIVOS
 
