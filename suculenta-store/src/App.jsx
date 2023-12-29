@@ -7,6 +7,7 @@ function App() {
       <Rotas />
     </div>
   );
+
 }
 
 export default App;
