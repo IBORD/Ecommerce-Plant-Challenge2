@@ -1,4 +1,4 @@
-# 🌱 PlantaPeace 🌱
+# 🌱 PlantPeace 🌱
 
 
 ## 🤵 INTEGRANTES
