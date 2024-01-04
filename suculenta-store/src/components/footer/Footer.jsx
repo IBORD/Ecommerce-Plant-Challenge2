@@ -16,14 +16,14 @@ export default function Rodape() {
                         <div className="infos">
                             <h2>Links</h2>
                             <Link className="opcoes" to='/'>About Us</Link>
-                            <Link className="opcoes" to='/'>Products</Link>
-                            <Link className="opcoes" to='/'>Blogs</Link>
+                            <Link className="opcoes" to='/ProductPage'>Products</Link>
+                            <Link className="opcoes" to='/HomePage'>Blogs</Link>
                         </div>
                         <div className="infos">
                             <h2>Community</h2>
                             <Link className="opcoes" to='/'>About Us</Link>
-                            <Link className="opcoes" to='/'>Products</Link>
-                            <Link className="opcoes" to='/'>Blogs</Link>
+                            <Link className="opcoes" to='/ProductPage'>Products</Link>
+                            <Link className="opcoes" to='/HomePage'>Blogs</Link>
                         </div>
                     </div>
                 </div>

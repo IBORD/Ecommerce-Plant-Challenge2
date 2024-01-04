@@ -12,8 +12,10 @@ export default function Header() {
                 <div>
                     <Link className="home" to='/'>Home</Link>
                     <Link className="nav" to='/form'>Register</Link>
-                    <Link className="nav" to='/'>Products</Link>
+
+                    <Link className="nav" to='/ProductPage'>Products</Link>
                     <Link className="nav" to='/aboutus'>About Us</Link>
+
                 </div>
                 <img src={Login} alt="Login" className='login' />
             </nav>

@@ -111,5 +111,7 @@ function PlantRegistration() {
       </div>
     </Formik>
   );
-}
+
+};
+
 export default PlantRegistration;
