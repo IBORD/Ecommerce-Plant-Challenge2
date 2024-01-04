@@ -13,7 +13,7 @@ export default function Header() {
                     <Link className="home" to='/'>Home</Link>
                     <Link className="nav" to='/'>Register</Link>
                     <Link className="nav" to='/'>Products</Link>
-                    <Link className="nav" to='/'>About Us</Link>
+                    <Link className="nav" to='/aboutus'>About Us</Link>
                 </div>
                 <img src={Login} alt="Login" className='login' />
             </nav>
