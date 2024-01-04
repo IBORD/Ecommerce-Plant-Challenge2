@@ -1,4 +1,4 @@
-import Rotas from './components/Routs/Routs';
+import Rotas from './components/Routes/Routes';
 import './style/Global.css';
 
 function App() {
