@@ -11,7 +11,7 @@ export default function Header() {
                 <img src={Logo} alt="Logo" className='logo' />
                 <div>
                     <Link className="home" to='/'>Home</Link>
-                    <Link className="nav" to='/'>Register</Link>
+                    <Link className="nav" to='/form'>Register</Link>
                     <Link className="nav" to='/'>Products</Link>
                     <Link className="nav" to='/'>About Us</Link>
                 </div>
