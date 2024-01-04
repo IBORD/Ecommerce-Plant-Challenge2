@@ -1,18 +1,13 @@
-import { useEffect, useState } from 'react';
 import Cacto from '../../assets/cactus.svg';
-import axios from 'axios';
+import Header from '../header/Header';
+import Rodape from '../footer/Footer'
 
 const ProductPage = () => {
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    axios.get('http://localhost:4000/plants').then(response => {
-      console.log(response);
-      setProducts(response.data);
-    }).catch(error => {console.log(error)})
-  }, [])
+ 
   return (
+    
     <section>
+      <Header />
       <div>
         <img src={Cacto} alt="cacto" />
         <div>
@@ -31,6 +26,7 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
+      <Rodape />
     </section>
   )
 }

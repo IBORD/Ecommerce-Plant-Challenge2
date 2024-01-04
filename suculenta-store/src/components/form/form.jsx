@@ -1,113 +1,117 @@
-import './style/Global.css';
-import React, { useState } from 'react';
-import { useForm, useFormState } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import React, { useState } from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as yup from "yup";
 
-const validationSchema = yup.object().shape({
-  plantName: yup.string().required('Nome é obrigatório'),
-  plantSubtitle: yup.string().required('Subtitulo é obrigatório'),
-  plantType: yup.string().required('Tipo é obrigatório'),
-  price: yup.number().required('Preço é obrigatório'),
-  label: yup.string().oneOf(['Indoor', 'Outdoor']).required('Rótulo é obrigatório'),
-  features: yup.string().required('Características são obrigatórias'),
-  discountPercentage: yup.number().required('Porcentagem de desconto é obrigatória'),
-  
- });
- 
- const PlantRegistration = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm({
-     resolver: yupResolver(validationSchema),
+
+function PlantRegistration() {
+  const validationSchema = yup.object({
+  PlantName: yup
+    .string()
+    .matches(/^[^\d]*$/, 'Nome da planta não pode conter números')
+    .required('Nome da planta é obrigatório'),
+ PlantSub: yup
+    .string()
+    .matches(/^[^\d]*$/, 'Nome da espécie não pode conter números')
+    .required('Nome da espécie é obrigatório'),
+  PlanType: yup
+    .string()
+    .matches(/^[^\d]*$/, 'Nome da planta não pode conter números')
+    .required('Nome da planta é obrigatório'),
+ preco: yup
+    .number()
+    .positive('Preço deve ser maior que zero')
+    .required('Preço é obrigatório'),
+    discount: yup
+    .number()
+    .positive('Preço deve ser maior que zero'),
+    features: yup
+    .string()
+    .required('requer algum caracter'),
+    description: yup
+    .string()
+    .required('requer algum caracter'),
+
   });
- 
-  const onSubmit = (data) => {
-     console.log(data);
-  };
- 
-  
-  return (
-     <form className="forma" onSubmit={handleSubmit(onSubmit)}>
-       <h1>Plant Registration</h1>
-       <label>Plant Name:</label>
-       <input
-         type="text"
-         id="plantName"
-         name="plantName"
-         placeholder="Name"
-         required
-         {...register('plantName')} />
-       {errors.plantName && <p>{errors.plantName.message}</p>}
-       <label for="plantSubtitle">Plant Subtitle:</label>
-       <input
-         type="text"
-         id="plantSubtitle"
-         name="plantSubtitle"
-         placeholder="Subtitle"
-         required
-         {...register('plantSubtitle')} />
-       {errors.plantSubtitle && <p>{errors.plantSubtitle.message}</p>}
-       <label for="plantType">Plant Type:</label>
-       <input
-         type="text"
-         id="plantType"
-         name="plantType"
-         placeholder="Type"
-         required
-         {...register('plantType')} />
-       {errors.plantType && <p>{errors.plantType.message}</p>}
-       <label for="price">Price:</label>
-       <input
-         type="number"
-         id="price"
-         name="price"
-         placeholder="Price"
-         required
-         {...register('price')} />
-       {errors.price && <p>{errors.price.message}</p>}
-       <label for="discountPercentage">Discount Percentage:</label>
-       <input
-         type="number"
-         id="discountPercentage"
-         name="discountPercentage"
-         placeholder="Discount"
-         required
-         {...register('discountPercentage')} />
-       {errors.discountPercentage && <p>{errors.discountPercentage.message}</p>}
-       <label for="label">Label:</label>
-       <label>
-         <input type="radio" id="indoor" name="label" value="Indoor" />
-         Indoor
-       </label>
-       <label>
-         <input type="radio" id="outdoor" name="label" value="Outdoor" />
-         Outdoor
-       </label>
-       <label for="features">Features:</label>
-       <textarea
-         id="features"
-         name="features"
-         rows="8"
-         cols="100"
-         placeholder="Features"
-         required
-         {...register('features')}
-       ></textarea>
-       {errors.features && <p>{errors.features.message}</p>}
-       <label for="descricao">Descrição:</label>
-      <textarea
-        id="descricao"
-        name="descricao"
-        rows="8"
-        cols="100"
-        placeholder="Suculenta cactus"
-        required
-        {...register('features')}
-      ></textarea>
-      {errors.features && <p>{errors.features.message}</p>}
-      <input type="submit" value="submit"/>
-    </form>
 
+  const [values] = useState({
+    nomeDaPlanta: '',
+    nomeDaEspecie: '',
+    preco: '',
+    plantType: '',
+    discount: '',
+    features: '',
+    descricao: '',
+   });
+
+  return (
+    <Formik
+      validationSchema={validationSchema}
+      initialValues={values}
+      
+    >
+      <div>
+        <h1>Plant Registration</h1>
+        <Form>
+          <div>
+            Plant name: 
+            <Field type="PlantName" name="PlantName" placeholder="PlantName" />
+            <ErrorMessage component="div" name="PlantName" />
+          </div>
+          <br />
+          <div>
+            plant subtitle:
+            <Field type="PlantSub" name="PlantSub" placeholder="PlantSub" />
+            <ErrorMessage component="div" name="PlantSub" />
+            <div>
+            <br />
+            Plant type:
+            <Field type="PlanType" name="PlanType" placeholder="PlanType" />
+            <ErrorMessage component="div" name="PlanType" />
+            
+          </div>
+          <br />
+          <div>
+          price:
+            <Field type="number" name="preco" placeholder="preco" />
+            <ErrorMessage component="div" name="preco" />
+          </div>
+          <br />
+          <div>
+          Discount percentage(optional):
+            <Field type="number" name="discount" placeholder="discount" />
+            <ErrorMessage component="div" name="discount" />
+            
+          </div>
+          <br />
+          <div>
+          <div>
+            indoor
+            <Field type="radio" name="indoor" va/>
+            <ErrorMessage component="div" name="indoor" />
+            
+            <Field type="radio" name="outdoor" />
+            outdoor
+            <ErrorMessage component="div" name="outdoor" />
+          </div>
+          features:
+            <textarea type="features" name="features" placeholder="features" as='textarea' cols="100" rows="8" maxlength='300' />
+            <ErrorMessage component="div" name="features" />
+          </div>
+          <br />
+          <div>
+          description:
+            <textarea type="description" name="description" placeholder="description" as='textarea' cols="100" rows="8" maxlength='300' />
+            <ErrorMessage component="div" name="description" />
+          </div>
+          
+          </div>
+
+          <button type="submit">Register</button>
+        </Form>
+      </div>
+    </Formik>
   );
+
 };
 
 export default PlantRegistration;
