@@ -21,11 +21,11 @@ const MostPopular = () => {
 
   }, [])
 
-  if (!products || !products.length) return null;
-
+  if (!products || !products.length) return <></>;
+  
   return (
     <section>
-      <h1 className='titulo'>This Weeks Most Popular<span className='titulo2'>And Best Selling</span></h1>
+      <h1 className='titulo'>This Weeks Most Popular <span className="subtitle"> And Best Selling</span></h1>
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={50}
@@ -34,12 +34,16 @@ const MostPopular = () => {
         navigation
         pagination={{ clickable: true }}
       > {products.map((product) => {
-        return <SwiperSlide>
-          <div><img src={product.imgUrl} alt="cacto" /></div>
-          <div className='nome'>{product.name}</div>
-          <div className='preco'>{product.price}</div>
-          <div className='label'>{product.label[0]}</div>
-        </SwiperSlide>;
+        console.log(product)
+        
+        return ( <SwiperSlide>
+          <div className='card'>
+            <div><img src={product.imgUrl} alt="cacto" /></div>
+            <div className='nome'>{product.name}</div>
+            <div className='preco'>{product.price}</div>
+            <div className='label'>{product.label[0]}</div>
+          </div>
+        </SwiperSlide>);
       })}
 
       </Swiper>
