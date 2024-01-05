@@ -32,8 +32,6 @@ const InSale = () => {
                 spaceBetween={50}
                 slidesPerView={3}
                 loop={true}
-                navigation
-                pagination={{ clickable: true }}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             > {products.map((product) => {

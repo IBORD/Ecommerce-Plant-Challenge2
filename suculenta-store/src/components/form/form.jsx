@@ -113,14 +113,14 @@ function PlantRegistration() {
                 <br />
                 <div className="divLabel">
                   <div className="divradio">
-                    <input type="radio" name="indoor" value="indoor" id="indoor" />
+                    <input type="radio" name="radioForm" value="indoor" id="indoor" />
                     <label for="indoor">Indoor</label>
-                    <ErrorMessage component="div" name="indoor" />
+                    <ErrorMessage component="div" name="radioForm" />
                   </div>
                   <div>
-                    <input type="radio" name="outdoor" value="outdoor" id="outdoor" />
+                    <input type="radio" name="radioForm" value="outdoor" id="outdoor" />
                     <label for="outdoor">Outdoor</label>
-                    <ErrorMessage component="div" name="outdoor" />
+                    <ErrorMessage component="div" name="radioForm" />
                   </div>
                 </div>
                 <div>
