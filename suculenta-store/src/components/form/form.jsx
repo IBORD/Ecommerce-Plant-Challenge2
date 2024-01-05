@@ -115,13 +115,13 @@ function PlantRegistration() {
                 <div className="divLabel">
                   <div className="divradio">
                     <input type="radio" name="radioForm" value="indoor" id="indoor" />
-                    <label for="indoor"> Indoor</label>
-                    <ErrorMessage component="div" name="indoor" />
+                    <label for="indoor">Indoor</label>
+                    <ErrorMessage component="div" name="radioForm" />
                   </div>
                   <div>
                     <input type="radio" name="radioForm" value="outdoor" id="outdoor" />
-                    <label for="outdoor"> Outdoor</label>
-                    <ErrorMessage component="div" name="outdoor" />
+                    <label for="outdoor">Outdoor</label>
+                    <ErrorMessage component="div" name="radioForm" />
                   </div>
                 </div>
                 <div>

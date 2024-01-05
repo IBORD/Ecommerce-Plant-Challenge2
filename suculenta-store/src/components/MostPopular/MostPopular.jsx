@@ -31,8 +31,6 @@ const MostPopular = () => {
         spaceBetween={50}
         slidesPerView={3}
         loop={true}
-        navigation
-        pagination={{ clickable: true }}
       > {products.map((product) => {
         console.log(product)
         
