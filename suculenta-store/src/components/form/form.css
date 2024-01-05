@@ -1,12 +1,8 @@
-   
 
 form {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 100%;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin: 0 auto;
    }
    
    form input[type="text"], form input[type="number"], form textarea, form select {
@@ -42,10 +38,12 @@ form {
     justify-content: center;
     mix-blend-mode: luminosity;
    }
+
+   img {
+    max-width: 100%;
+    display: inline-block;
+  }
    
-   .divform p{
-       margin-bottom: 8px;
-   }
    
    .inputField{
        height: 46px;
@@ -78,6 +76,10 @@ form {
        color: #354733;
    
    }
+
+   label{
+    font-size: 1.2rem;
+   }
    
    .btn-reg {
        display: inline-block;
@@ -102,3 +104,35 @@ form {
      .radio-field input[type="radio"]:not(:checked) ~ label {
        color: gray;
      }
+
+     @media only screen and (max-width: 600px) {
+        .container {
+            max-width: 90%;
+        }
+    }
+    
+    @media only screen and (min-width: 600px) {
+        .container {
+            max-width: 90%;
+        }
+    }
+ 
+    @media only screen and (min-width: 768px) {
+        .container {
+            max-width: 80%;
+        }
+    }
+    
+ 
+    @media only screen and (min-width: 992px) {
+        .container {
+            max-width: 70%;
+        }
+    }
+    
+    
+    @media only screen and (min-width: 1200px) {
+        .container {
+            max-width: 1200px;
+        }
+    }
