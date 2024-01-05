@@ -111,27 +111,28 @@ function PlantRegistration() {
                   </div>
                 </div>
                 <br />
+                <label htmlFor="PlantName">Label: </label>
                 <div className="divLabel">
                   <div className="divradio">
-                    <input type="radio" name="indoor" value="indoor" id="indoor" />
-                    <label for="indoor">Indoor</label>
+                    <input type="radio" name="radioForm" value="indoor" id="indoor" />
+                    <label for="indoor"> Indoor</label>
                     <ErrorMessage component="div" name="indoor" />
                   </div>
                   <div>
-                    <input type="radio" name="outdoor" value="outdoor" id="outdoor" />
-                    <label for="outdoor">Outdoor</label>
+                    <input type="radio" name="radioForm" value="outdoor" id="outdoor" />
+                    <label for="outdoor"> Outdoor</label>
                     <ErrorMessage component="div" name="outdoor" />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="PlantName">Features:</label>
-                  <Field type="textarea" name="features" placeholder="features" as='textarea' cols="100" rows="8" maxlength='300' />
+                  <label htmlFor="PlantName">Features</label>
+                  <Field type="textarea" name="features" placeholder="Features" as='textarea' cols="100" rows="8" maxlength='400' />
                   <ErrorMessage component="div" name="features" />
                 </div>
                 <br />
                 <div>
-                  <label htmlFor="PlantName">Description:</label>
-                  <Field type="textarea" name="description" placeholder="description" as='textarea' cols="100" rows="8" maxlength='300' />
+                  <label htmlFor="PlantName">Description</label>
+                  <Field type="textarea" name="description" placeholder="Description" as='textarea' cols="100" rows="8" maxlength='400' />
                   <ErrorMessage component="div" name="description" />
                 </div>
 

@@ -1,0 +1,138 @@
+
+form {
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+   }
+   
+   form input[type="text"], form input[type="number"], form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+   }
+   
+   form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #354733;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   
+   
+   .divBody{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: #F8F9FB;
+   }
+   
+   .divImg{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    mix-blend-mode: luminosity;
+   }
+
+   img {
+    max-width: 100%;
+    display: inline-block;
+  }
+   
+   
+   .inputField{
+       height: 46px;
+       width: 476px;
+       border: 1.5px solid #afb2aa;
+       border-radius: 4px;
+       height: 30px;
+       padding: 12px, 0px, 12px, 16px;
+       gap: 10px;
+   }
+   
+   
+   .divdesconto{
+       width: 475px;
+       height: 84px;
+       display: flex;
+       gap: 18px;
+       margin-bottom: 15px;
+   }
+   
+   .divLabel{
+       display: flex;
+       gap: 10px;
+       padding-bottom: 30px;
+   }
+   
+   
+   .divBody h1{
+   
+       color: #354733;
+   
+   }
+
+   label{
+    font-size: 1.2rem;
+   }
+   
+   .btn-reg {
+       display: inline-block;
+       padding: 12px 24px;
+       font-size: 16px;
+       color: #ffffff;
+       background-color: #354733;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+   
+   }
+   
+   .btn-reg:hover {
+       background-color: #354733;
+   }
+   
+   .radio-field input[type="radio"]:not(:checked) {
+       opacity: 0.5;
+     }
+   
+     .radio-field input[type="radio"]:not(:checked) ~ label {
+       color: gray;
+     }
+
+     @media only screen and (max-width: 600px) {
+        .container {
+            max-width: 90%;
+        }
+    }
+    
+    @media only screen and (min-width: 600px) {
+        .container {
+            max-width: 90%;
+        }
+    }
+ 
+    @media only screen and (min-width: 768px) {
+        .container {
+            max-width: 80%;
+        }
+    }
+    
+ 
+    @media only screen and (min-width: 992px) {
+        .container {
+            max-width: 70%;
+        }
+    }
+    
+    
+    @media only screen and (min-width: 1200px) {
+        .container {
+            max-width: 1200px;
+        }
+    }
