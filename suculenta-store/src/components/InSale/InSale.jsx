@@ -20,12 +20,13 @@ const InSale = () => {
             .catch(error => { console.log(error) })
 
     }, [])
-
-    if (!products || !products.length) return null;
+    console.log(products);
+    if (!products || !products.length) return <> </>;
+ 
 
     return (
         <section>
-            <h1 className='titulo'>Plants In Sale</h1>
+            <h1 className='titulo'><span className='subtitle'>Plants In </span> Sale </h1>
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
                 spaceBetween={50}
@@ -36,11 +37,14 @@ const InSale = () => {
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             > {products.map((product) => {
+                
                 return <SwiperSlide>
-                    <div><img src={product.imgUrl} alt="cacto" /></div>
-                    <div className='nome'>{product.name}</div>
-                    <div className='preco'>{product.price}</div>
-                    <div className='label'>{product.label[0]}</div>
+                    <div>
+                        <div><img src={product.imgUrl} alt="cacto" /></div>
+                        <div className='nome'>{product.name}</div>
+                        <div className='preco'>{product.price}</div>
+                        <div className='label'>{product.label[0]}</div>
+                    </div>
                 </SwiperSlide>;
             })}
 

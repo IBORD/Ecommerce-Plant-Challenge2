@@ -8,6 +8,7 @@
 }
 
 .swiper-wrapper {
+    display: flex;
     background: #F0F1EE;
     font-size: 15px;
     font-style: normal;
@@ -21,13 +22,14 @@
     color: #354733;
     background-color: #F0F1EE;
     font-family: Garamond;
-    font-size: 64px;
+    font-size: 50px;
     font-style: normal;
     font-weight: bold;
     padding-bottom: 50px;
+    gap: 15px;
 }
 
-.titulo2 {
+.subtitle {
     color: #8A9B6E;
 }
 
@@ -60,3 +62,9 @@
     border: 1.619px solid var(--Primary-Avacado, #8A9B6E);
     background: #F0F1EE;
 }
+
+.card {
+    background-color: white;
+
+}
+
