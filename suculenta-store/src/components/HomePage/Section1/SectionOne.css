@@ -39,14 +39,15 @@
 }
 
 .shopnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     background-color: #354733;
     color: white;
     width: 191px;
     height: 62px;
-    border: 1px solid #354733;
-    border-radius: 1px;
     font-family: 'Raleway';
-    cursor: pointer;
 }
 
 .div_left {
