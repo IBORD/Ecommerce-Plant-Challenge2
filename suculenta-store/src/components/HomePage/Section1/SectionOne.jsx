@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import left from '../../../assets/leftplanthomepage.svg';
 import icone from '../../../assets/retangleheader.svg';
 import './SectionOne.css';
@@ -18,7 +19,7 @@ export default function SectionOne() {
                             Our website offers a wide array of stunning plants, ranging from vibrant flowers to lush indoor foliage, allowing you to create your very own green oasis.
                         </p>
                     </div>
-                    <button className='shopnow'>Shop now</button>
+                    <Link className='shopnow' to='/ProductPage'>Shop now</Link>
                 </div>
                 <div className='div_left'>
                     <img src={left} alt="left" className='left_image' />
